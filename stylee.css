@@ -1,0 +1,829 @@
+/* ===================================================
+   SORVETERIA FONTANA — CSS RESPONSIVO COMPLETO v3
+   Breakpoints: 360 | 480 | 768 | 1024 | 1280 | 1440+
+   =================================================== */
+ 
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #222;
+    background: #fff;
+    overflow-x: hidden;
+}
+ 
+img { max-width: 100%; display: block; }
+a   { text-decoration: none; color: inherit; }
+ 
+/* ===== WRAPPER GLOBAL ===== */
+/* Todas as seções ficam dentro de uma faixa de 1180px centralizada */
+.container,
+.container_ultra_blaster,
+.base_menu,
+.container_media,
+.container_especial,
+.container_media_final,
+.footer {
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:  clamp(14px, 3vw, 40px);
+    padding-right: clamp(14px, 3vw, 40px);
+}
+ 
+/* ===== HEADER ===== */
+header {
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    /* full‑bleed bg, conteúdo centralizado via .container */
+    padding: 0;
+    display: block;
+}
+ 
+.container {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+ 
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+ 
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+ 
+/* Nav */
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+ 
+nav { display: flex; align-items: center; }
+ 
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+ 
+li {
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background 200ms, color 200ms;
+}
+ 
+li:hover {
+    background-color: #fdb6c8;
+    color: #fff;
+}
+ 
+/* Ícones sociais no header */
+.logos_whatsApp,
+.logo_instagram {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+ 
+.logos_whatsApp img,
+.logo_instagram img {
+    width: 100%;
+    object-fit: contain;
+}
+ 
+/* Botão Peça Agora */
+.peça_agora { flex-shrink: 0; }
+ 
+button {
+    background-color: #fdb6c8;
+    color: #fff;
+    border: none;
+    min-width: 118px;
+    height: 38px;
+    padding: 0 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 250ms;
+    white-space: nowrap;
+}
+ 
+button:hover { background-color: #f890aa; }
+ 
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+ 
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+ 
+/* ===== HERO ===== */
+.container_ultra_blaster {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+ 
+.box_grande {
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 36px);
+    padding: clamp(28px, 4vw, 50px) clamp(22px, 4vw, 48px);
+    background: linear-gradient(112deg, #FDEEF5 54%, #DAEEF7 46%);
+    min-height: 340px;
+}
+ 
+.container- {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+ 
+.titulo {
+    width: fit-content;
+    height: 28px;
+    color: #5c86a1;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 13px;
+    background-color: #dde0e5;
+}
+ 
+.titulo h1 {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+ 
+.paragrafo {
+    font-size: clamp(28px, 3.8vw, 48px);
+    font-weight: 800;
+    line-height: 1.12;
+    color: #1a1a1a;
+}
+ 
+.sub_paragrafo {
+    font-size: clamp(13px, 1.3vw, 15px);
+    color: #666;
+    line-height: 1.65;
+    max-width: 380px;
+}
+ 
+.ver_va {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+ 
+.ver_valores {
+    height: 40px;
+    padding: 0 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: #fcb0be;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 220ms;
+    white-space: nowrap;
+}
+ 
+.ver_valores:hover { background-color: #f890aa; }
+ 
+.peça_da_box {
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 220ms;
+    white-space: nowrap;
+}
+ 
+.peça_da_box:hover { background-color: #f5f5f5; }
+ 
+.img_grande {
+    width: clamp(200px, 42%, 460px);
+    flex-shrink: 0;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    object-fit: cover;
+}
+ 
+/* ===== BENEFÍCIOS ===== */
+.base_menu {
+    padding-top: 12px;
+    padding-bottom: 0;
+}
+ 
+.menu_ {
+    background: z#000000;
+    border-radius: 14px;
+    box-shadow: 0 3px 18px rgba(0,0,0,.07);
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+.item {
+    flex: 1 1 200px;
+    padding: 16px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+ 
+.item:last-child { border-right: none; }
+ 
+.sem-borda { border-right: none; }
+ 
+.icone {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 2px solid #e0f0f8;
+}
+ 
+.texto h2 { font-size: 13px; font-weight: 700; margin-bottom: 3px; color: #222; }
+.texto p  { font-size: 12px; color: #777; line-height: 1.4; }
+ 
+/* ===== SABORES ===== */
+.container_media {
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+ 
+.container_media_sub {
+    background-color: #FDEEF5;
+    border-radius: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(14px, 2.5vw, 26px);
+    padding: clamp(20px, 2.8vw, 32px);
+    align-items: flex-start;
+}
+ 
+.box_media {
+    flex: 0 0 clamp(170px, 20%, 220px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+.media_titulo {
+    color: #fb91a9;
+    width: fit-content;
+    height: 22px;
+    background-color: #feeaef;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 0 11px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.media_h1 p {
+    font-size: clamp(22px, 2.8vw, 32px);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+ 
+.media_subh1 p { color: #666; line-height: 1.55; font-size: 12px; }
+ 
+.media_ver_sabores p {
+    color: #fb91a9;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13px;
+}
+ 
+.media_ver_sabores p:hover { text-decoration: underline; }
+ 
+.opcoes_media {
+    flex: 1 1 0;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+ 
+.card_ {
+    padding: 11px;
+    border-radius: 14px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    transition: transform 230ms, box-shadow 230ms;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+ 
+.card_:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+ 
+.card_ img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+ 
+.card_ h3 { font-size: 13px; font-weight: 700; color: #333; }
+.card_ p  { font-size: 11px; color: #888; line-height: 1.4; }
+ 
+/* ===== PROMOÇÃO ESPECIAL ===== */
+.container_especial {
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+ 
+.container_especial_sub {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2.8vw, 34px);
+    padding: clamp(22px, 3vw, 38px) clamp(22px, 4vw, 48px);
+    border-radius: 18px;
+    background-color: #DAEEF7;
+    flex-wrap: wrap;
+}
+ 
+.img_especial {
+    width: clamp(100px, 12vw, 148px);
+    height: clamp(100px, 12vw, 148px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 3px solid #e0f0f8;
+}
+ 
+.coluna_especial {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 200px;
+    min-width: 0;
+}
+ 
+.titulo_especial {
+    width: fit-content;
+    height: 24px;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    padding: 0 13px;
+    border-radius: 25px;
+    background-color: #a3dffd;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+ 
+.titulo_especial h1 { font-size: 10px; font-weight: 700; }
+ 
+.h1_especial h1 {
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1a1a1a;
+}
+ 
+.h1_especial p {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.55;
+}
+ 
+.montar_especial {
+    width: fit-content;
+    height: 38px;
+    display: flex;
+    font-size: 13px;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 18px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 200ms;
+    border: 1px solid #ccc;
+}
+ 
+.montar_especial:hover { background-color: #f0f0f0; }
+ 
+.img_sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+ 
+.coluna_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    width: 94px;
+}
+ 
+.img_sub_sub {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 200ms;
+}
+ 
+.img_sub_sub:hover { transform: scale(1.06); }
+ 
+.h1_img { text-align: center; font-size: 11px; font-weight: 600; color: #444; }
+ 
+.seta_especial { font-size: 18px; color: #aacfe0; margin-top: -18px; }
+ 
+/* ===== INSTAGRAM ===== */
+.container_media_final {
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+ 
+.container_media_sub_final {
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 2px 14px rgba(0,0,0,.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(14px, 2.5vw, 26px);
+    padding: clamp(20px, 2.8vw, 32px);
+    align-items: center;
+}
+ 
+.box_media_final {
+    flex: 0 0 clamp(170px, 20%, 220px);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+ 
+.media_titulo_final {
+    color: #ff6f91;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.media_h1_final p {
+    font-size: clamp(22px, 2.8vw, 30px);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+ 
+.media_subh1_final p { color: #888; line-height: 1.55; font-size: 12px; }
+ 
+.media_ver_sabores_final { margin-top: 4px; }
+ 
+.media_ver_sabores_final p {
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #ff99c2;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    transition: background 220ms;
+}
+ 
+.media_ver_sabores_final p:hover { background-color: #f770a8; }
+ 
+.opcoes_media_final {
+    flex: 1 1 0;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+ 
+.card_final {
+    border-radius: 12px;
+    background-color: #DAEEF7;
+    overflow: hidden;
+    transition: transform 230ms;
+}
+ 
+.card_final:hover { transform: translateY(-3px); }
+ 
+.img_sabor_final { width: 100%; height: 100%; background-color: #DAEEF7; }
+ 
+/* ===== FOOTER ===== */
+.footer {
+    background: #DAEEF7;
+    /* override: footer precisa de full‑bleed bg */
+    max-width: 100%;
+    padding-top: clamp(28px, 3.5vw, 44px);
+    padding-bottom: 18px;
+    margin-top: 18px;
+}
+ 
+/* Conteúdo interno centralizado */
+.footer-content {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 clamp(14px, 3vw, 40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 3.5vw, 44px);
+}
+ 
+.footer-brand {
+    flex: 1 1 170px;
+    min-width: 150px;
+}
+ 
+.footer-brand img { width: 48px; margin-bottom: 10px; }
+ 
+.footer-brand p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.65;
+    max-width: 195px;
+}
+ 
+.social {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    font-size: 17px;
+    color: #555;
+    cursor: pointer;
+}
+ 
+.footer-column {
+    flex: 1 1 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 120px;
+}
+ 
+.footer-column h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; color: #222; }
+ 
+.footer-column a,
+.footer-column span {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.5;
+}
+ 
+.footer-column a:hover { color: #222; }
+ 
+.footer-copy {
+    max-width: 1240px;
+    margin: 20px auto 0;
+    padding: 12px clamp(14px, 3vw, 40px) 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+}
+ 
+/* ==============================================
+   TABLET LARGO (≤ 1080px) — nav vira hamburger
+   ============================================== */
+@media (max-width: 1080px) {
+ 
+    .menu    { display: none; }
+    .hamburger { display: flex; }
+    .peça_agora { display: none; }
+ 
+    /* Dropdown */
+    .menu.aberto {
+        display: block;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0,0,0,.1);
+        z-index: 199;
+    }
+ 
+    .menu.aberto ul {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 6px 0 10px;
+        gap: 0;
+    }
+ 
+    .menu.aberto ul li {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 0;
+        font-size: 15px;
+        border-bottom: 1px solid #f5f5f5;
+    }
+ 
+    /* Sabores: 3 colunas */
+    .opcoes_media { grid-template-columns: repeat(3, 1fr); }
+ 
+    /* Instagram: 4 colunas */
+    .opcoes_media_final { grid-template-columns: repeat(4, 1fr); }
+}
+ 
+/* ==============================================
+   TABLET (≤ 768px)
+   ============================================== */
+@media (max-width: 768px) {
+ 
+    header { height: 58px; }
+    .container { height: 58px; }
+    .menu.aberto { top: 58px; }
+ 
+    /* Hero: coluna */
+    .box_grande {
+        flex-direction: column;
+        background: linear-gradient(180deg, #FDEEF5 58%, #DAEEF7 42%);
+        padding: 22px 18px;
+        min-height: auto;
+    }
+    .container- { width: 100%; }
+    .img_grande { width: 100%; max-width: 100%; aspect-ratio: 16/9; }
+ 
+    /* Benefícios: 2 por linha */
+    .item { flex: 1 1 46%; }
+    .item:nth-child(2) { border-right: none; }
+    .item:nth-child(3) { border-right: 1px solid #eee; }
+    .item:nth-child(4) { border-right: none; }
+ 
+    /* Sabores: sidebar + 2 colunas */
+    .container_media_sub { flex-direction: column; }
+    .box_media { flex: none; width: 100%; }
+    .opcoes_media { grid-template-columns: repeat(2, 1fr); }
+ 
+    /* Promoção */
+    .container_especial_sub {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .coluna_especial { align-items: center; }
+    .seta_especial { display: none; }
+    .img_sub { justify-content: center; gap: 16px; }
+ 
+    /* Instagram */
+    .container_media_sub_final { flex-direction: column; }
+    .box_media_final { flex: none; width: 100%; }
+    .opcoes_media_final { grid-template-columns: repeat(3, 1fr); }
+}
+ 
+/* ==============================================
+   MOBILE (≤ 520px)
+   ============================================== */
+@media (max-width: 520px) {
+ 
+    /* Benefícios: 1 por linha */
+    .item { flex: 1 1 100%; border-right: none; }
+ 
+    /* Sabores: 2 colunas mantém */
+    .opcoes_media { grid-template-columns: repeat(2, 1fr); }
+ 
+    /* Instagram: 2 colunas */
+    .opcoes_media_final { grid-template-columns: repeat(2, 1fr); }
+ 
+    /* Promoção: circulinhos menores */
+    .coluna_img { width: 78px; }
+    .img_sub_sub { width: 68px; height: 68px; }
+ 
+    /* Footer: 2 colunas */
+    .footer-column { flex: 1 1 45%; min-width: 120px; }
+}
+ 
+/* ==============================================
+   MOBILE PEQUENO (≤ 380px)
+   ============================================== */
+@media (max-width: 380px) {
+ 
+    .paragrafo { font-size: 23px; }
+ 
+    .ver_va { flex-direction: column; align-items: flex-start; }
+    .ver_valores, .peça_da_box { width: 100%; justify-content: center; }
+ 
+    /* Sabores: 1 coluna */
+    .opcoes_media { grid-template-columns: 1fr 1fr; }
+    .card_ img { aspect-ratio: 4/3; }
+ 
+    /* Footer: 1 coluna */
+    .footer-column { flex: 1 1 100%; }
+}
+ 
+/* ==============================================
+   TELAS ULTRAWIDE (≥ 1600px) — espaçamento extra
+   ============================================== */
+@media (min-width: 1600px) {
+    .container,
+    .container_ultra_blaster,
+    .base_menu,
+    .container_media,
+    .container_especial,
+    .container_media_final {
+        max-width: 1400px;
+    }
+    .footer-content,
+    .footer-copy { max-width: 1400px; }
+}
+ 
+/* ==============================================
+   ACESSIBILIDADE
+   ============================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+ 
+:focus-visible {
+    outline: 2px solid #fdb6c8;
+    outline-offset: 3px;
+    border-radius: 4px;
+}

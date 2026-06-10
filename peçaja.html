@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEÇA JA</title>
+    <link rel="icon" href="fotos/fontana_logo (1).png">
+    <link rel="stylesheet" href="peçaja.css">
+</head>
+
+<body>    
+    <div class="seta1">
+        <a href="index.html">
+            <img src="fotos/setas-pretas-para-a-esquerda (1).png" alt="Seta para voltar a pagina">
+        </a>
+    </div>
+
+    <div class="mundo">
+        <div class="comanda">
+            
+            
+                <header>
+                    <h1>Monte o seu pedido🍨</h1>
+                    <h2>Sorveteria Fontana • Açai artesanal</h2>
+                </header>
+
+                <!-- TAMANHO -->
+                <div class="sec-titulo">TAMANHO</div>
+
+                <div class="Tamanho">
+                    <input type="radio" name="tamanho" id="300ml">
+                    <label for="300ml">
+                        <span class="ml">300ml</span>
+                        <span class="nome">Pequeno</span>
+                        <span class="preco">R$12</span>
+                    </label>
+
+                    <input type="radio" name="tamanho" id="500ml">
+                    <label for="500ml">
+                        <span class="ml">500ml</span>
+                        <span class="nome">Médio</span>
+                        <span class="preco">R$18</span>
+                    </label>
+
+                    <input type="radio" name="tamanho" id="700ml">
+                    <label for="700ml">
+                        <span class="ml">700ml</span>
+                        <span class="nome">Grande</span>
+                        <span class="preco">R$24</span>
+                    </label>
+
+                    <input type="radio" name="tamanho" id="1LT">
+                    <label for="1LT">
+                        <span class="ml">1000ml</span>
+                        <span class="nome">Família</span>
+                        <span class="preco">R$35</span>
+                    </label>
+                </div>
+
+                <div class="corpo">
+
+                    <!-- FRUTAS -->
+                    <div class="col-frutas">
+                        <div class="sec-titulo">
+                            FRUTAS <span class="sec-obs">ATÉ 3</span>
+                        </div>
+
+                        <div class="frutas">
+                            <div class="item">
+                                <input type="checkbox" id="Banana" name="frutas">
+                                <label for="Banana">🍌 Banana</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="Morango" name="frutas">
+                                <label for="Morango">🍓 Morango</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="Uva" name="frutas">
+                                <label for="Uva">🍇 Uva</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="Abacaxi" name="frutas">
+                                <label for="Abacaxi">🍍 Abacaxi</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="Manga" name="frutas">
+                                <label for="Manga">🥭 Manga</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COBERTURAS -->
+                    <div class="coberturas">
+                        <div class="sec-titulo">
+                            COBERTURAS <span class="sec-obs">ATÉ 3</span>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Chocolate" id="Chocolate">
+                            <label for="Chocolate">Chocolate</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="LeiteCondensado" id="LeiteCondensado">
+                            <label for="LeiteCondensado">Leite Condensado</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Morango" id="CMorango">
+                            <label for="CMorango">Morango</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Caramelo" id="Caramelo">
+                            <label for="Caramelo">Caramelo</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Maracuja" id="Maracuja">
+                            <label for="Maracuja">Maracujá</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="tittufrutti" id="tuttifrutti">
+                            <label for="tuttifrutti">tutti frutti</label>
+                        </div>
+                    </div>
+
+                    <!-- COMPLEMENTOS -->
+                    <div class="complementos">
+                        <div class="sec-titulo">
+                            COMPLEMENTOS <span class="sec-obs">ATÉ 3</span>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Granola" id="Granola">
+                            <label for="Granola">Granola</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Leite em pó" id="Leiteempo">
+                            <label for="Leiteempo">Leite em pó</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Confete" id="Confete">
+                            <label for="Confete">Confete</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Pacoca" id="Pacoca">
+                            <label for="Pacoca">Paçoca</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Amendoim" id="Amendoim">
+                            <label for="Amendoim">Amendoim</label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="Ovomaltine" id="Ovomaltine">
+                            <label for="Ovomaltine">Ovomaltine</label>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.querySelectorAll('[name=frutas]').forEach(cb => {
+                            cb.addEventListener('change', () => {
+                                if (document.querySelectorAll('[name=frutas]:checked').length > 3) {
+                                    cb.checked = false;
+                                    alert('Você só pode escolher até 3 frutas!');
+                                }
+                            });
+                        });
+
+                        const coberturas = ['Chocolate', 'LeiteCondensado', 'Morango', 'Caramelo', 'Maracuja', 'tittufrutti'];
+                        coberturas.forEach(nome => {
+                            document.querySelector(`[name=${nome}]`)?.addEventListener('change', function() {
+                                const marcados = coberturas.filter(n => document.querySelector(`[name=${n}]`)?.checked).length;
+                                if (marcados > 3) {
+                                    this.checked = false;
+                                    alert('Você só pode escolher até 3 coberturas!');
+                                }
+                            });
+                        });
+
+                        const complementos = ['Granola', 'Leite em pó', 'Confete', 'Pacoca', 'Amendoim', 'Ovomaltine'];
+                        complementos.forEach(nome => {
+                            document.querySelector(`[name="${nome}"]`)?.addEventListener('change', function() {
+                                const marcados = complementos.filter(n => document.querySelector(`[name="${n}"]`)?.checked).length;
+                                if (marcados > 3) {
+                                    this.checked = false;
+                                    alert('Você só pode escolher até 3 complementos!');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>

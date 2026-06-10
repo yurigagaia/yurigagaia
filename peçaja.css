@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background: linear-gradient(135deg, #99d2f7 0%, #b5e3f7 40%, #b8dff5 100%);
+    font-family: 'Nunito', sans-serif;
+}
+.mundo{
+  background: #dff0f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.comanda{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    width: 1000px;
+    overflow: hidden;
+    padding: 20px;
+}
+header{
+    background: linear-gradient(110deg, #cbebf5 0%, #c2dfe8 42%, #fdd6e2 75%, #fdb6c8 100%);
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+}
+.Tamanho {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+}
+.Tamanho input[type="radio"] {
+    display: none;
+}
+.Tamanho label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border: 1.5px solid #f0dde3;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+}
+.ml {
+    font-size: 13px;
+    font-weight: 800;
+    color: #3a7a90;
+}
+.nome {
+    font-size: 10px;
+    color: #bbb;
+    margin: 2px 0;
+}
+.preco {
+    font-size: 11px;
+    font-weight: 700;
+    color: #bbb;
+}
+.Tamanho input:checked + label {
+    border-color: #fdb6c8;
+    background: #fff0f4;
+}
+.Tamanho input:checked + label .ml {
+    color: #c45a78;
+}
+.Tamanho input:checked + label .preco {
+    color: #e07a96;
+}
+.sec-titulo{
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: #3a7a90;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.sec-titulo::after{
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #fdb6c8;
+}
+.Tamanho{
+    border-bottom: 1.5px dashed #e8d5d8;
+    padding-bottom: 16px;
+}
+.corpo{
+    display: flex;
+    gap: 0;
+}
+.col-frutas, .coberturas, .complementos{
+    flex: 1;
+    padding: 14px 18px;
+}
+.col-frutas, .coberturas{
+    border-right: 1.5px dashed #e8d5d8;
+}
+.frutas div{
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1.5px solid #f5eaed;
+    border-radius: 8px;
+    background: white;
+    margin-bottom: 6px;
+}
+.item label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3a7a90;
+    cursor: pointer;
+}
+.item input[type="checkbox"] {
+    accent-color: #e07a96;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+.item:has(input:checked) {
+    border-color: #fdb6c8;
+    background: #fff0f4;
+}
+.item:has(input:checked) label {
+    color: #c45a78;
+}                               
+.coberturas div{
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.complementos div{
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.seta1 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+.seta1 img {
+    width: 110px;
+    height: 100px;
+}
